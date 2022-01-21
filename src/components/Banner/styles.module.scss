@@ -1,0 +1,11 @@
+.banner {
+    height: 380px;
+    width: 100%;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba($color:#ffff, $alpha: .5);
+    font-family: 'Helvetica';
+}
