@@ -1,0 +1,113 @@
+.container {
+    width: 260px;
+
+    img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        border: 5px solid var(--white);
+        margin-top: -130px; //colocar para cima
+    }
+
+    h1 {
+        font-size: 1.3125rem;
+        color: var(--gray-800);
+        margin-top: 10px;
+    }
+
+    span {
+        font-size: 0.875rem;
+        color: var(--gray-800);
+        font-weight: lighter;
+    }
+
+    p {
+        font-size: 0.875rem;
+        color: var(--gray-800);
+        margin-top: 15px;
+    }
+
+    >ul {
+        margin-top: 20px;
+        list-style: none;
+
+        li {
+            font-size: 0.875rem;
+            color: var(--gray-400);
+
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+
+            svg {
+                margin-right: 10px;
+            }
+
+            &:first-child {
+                margin: 0;
+            }
+        }
+    }
+
+    @mixin make-widget($bool) {
+        @if $bool==true {
+            margin-top: 20px;
+
+            strong {
+                font-weight: normal;
+                color: var(--primary);
+                font-size: 0.875rem;
+                display: flex;
+                align-items: center;
+            }
+
+            svg {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    //  @include make-widget(true);
+
+    &_widget_followers {
+        @include make-widget(true);
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: 45px;
+                height: 45px;
+                background: var(--gray-100);
+                border-radius: 50%;
+                // flex-shrink: 0;
+                // flex-grow: 1;
+                flex: 1 0 auto; //primeiro e o grow e o segundo e o shrink
+                margin: 5px 5px 5px 0;
+
+            }
+        }
+    }
+
+    &_widget_images {
+        @include make-widget(true);
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: 80px;
+                height: 80px;
+                background: var(--gray-100);
+                border-radius: 5px;
+                flex-shrink: 0;
+                flex-grow: 1;
+                margin: 5px 5px 5px 0;
+            }
+        }
+    }
+}
