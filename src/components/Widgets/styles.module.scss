@@ -1,0 +1,60 @@
+@mixin make-widget($bool) {
+    @if $bool==true {
+        background: var(--white);
+        padding: 15px;
+        margin-top: 20px;
+
+        strong {
+            font-weight: normal;
+            color: var(--primary);
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+        }
+
+        svg {
+            margin-right: 5px;
+        }
+    }
+}
+
+.container {
+    width: 290px;
+    margin-top: 10px;
+
+    &_follow {
+        @include make-widget(true);
+
+        div {
+            display: flex;
+            align-items: baseline;
+
+            >strong {
+                font-size: 1.125rem;
+                color: var(--gray-800);
+            }
+
+            a {
+                color: var(--primary);
+                font-size: 0.75rem;
+                text-decoration: none;
+            }
+        }
+
+        ul {
+            list-style: none;
+
+            li>div {
+                img {
+                    width: 200px;
+                    height: 200px
+                }
+            }
+        }
+    }
+
+    &_trends {
+        @include make-widget(true);
+
+    }
+}
