@@ -5,7 +5,7 @@ export const Widgets = () => {
     return (
         <aside className={styles.container}>
             <div className={styles.container_follow}>
-                <div className="">
+                <div className={styles.container_follow_title}>
                     <strong>Who to follow</strong>
                     <a href="">Refresh</a>
                     <a href="">View all</a>
@@ -18,8 +18,8 @@ export const Widgets = () => {
                                 <strong>Spade <span>@spade_be</span></strong>
                                 <button>Follow</button>
                             </div>
-                            <a href="">x</a>
                         </div>
+                        <a href="">x</a>
                     </li>
                     <li>
                         <div>
@@ -28,8 +28,8 @@ export const Widgets = () => {
                                 <strong>Spade <span>@spade_be</span></strong>
                                 <button>Follow</button>
                             </div>
-                            <a href="">x</a>
                         </div>
+                        <a href="">x</a>
                     </li>
                     <li>
                         <div>
@@ -38,14 +38,14 @@ export const Widgets = () => {
                                 <strong>Spade <span>@spade_be</span></strong>
                                 <button>Follow</button>
                             </div>
-                            <a href="">x</a>
                         </div>
+                        <a href="">x</a>
                     </li>
                 </ul>
             </div>
-            <div className={styles.container_trends}>
+            {/* <div className={styles.container_trends}>
 
-            </div>
+            </div> */}
         </aside>
     );
 }

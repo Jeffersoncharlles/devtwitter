@@ -2,7 +2,7 @@
     @if $bool==true {
         background: var(--white);
         padding: 15px;
-        margin-top: 20px;
+        margin-top: 10px;
 
         strong {
             font-weight: normal;
@@ -20,12 +20,13 @@
 
 .container {
     width: 290px;
-    margin-top: 10px;
+    margin-top: 5px;
 
     &_follow {
         @include make-widget(true);
+        padding: 15px;
 
-        div {
+        &_title {
             display: flex;
             align-items: baseline;
 
@@ -34,20 +35,102 @@
                 color: var(--gray-800);
             }
 
-            a {
+            >a {
                 color: var(--primary);
                 font-size: 0.75rem;
                 text-decoration: none;
+                position: relative;
+                padding-left: 10px;
+
+                &::before {
+                    content: '';
+                    width: 2px;
+                    height: 2px;
+                    border-radius: 50%;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    background: var(--gray-800);
+                    position: absolute;
+                    left: 1px;
+                    top: 6px;
+                }
             }
         }
 
         ul {
             list-style: none;
+            // display: flex;
+            // flex-direction: column;
+            margin-top: 10px;
 
-            li>div {
-                img {
-                    width: 200px;
-                    height: 200px
+            li {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid var(--gray-200);
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+
+                >a {
+                    color: var(--gray-200);
+                    text-decoration: none;
+                    font-size: 0.875rem;
+                }
+
+                >div {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 50%;
+                    }
+
+                    div {
+                        margin-left: 10px;
+                        display: flex;
+                        flex-direction: column;
+
+                        strong {
+                            font-size: 0.875rem;
+                            color: var(--gray-800);
+
+                            span {
+                                font-weight: normal;
+                                font-size: 0.875rem;
+                                padding-left: 5px;
+                                color: var(--gray-200);
+                            }
+                        }
+
+                        button {
+                            height: 27px;
+                            width: 90px;
+                            margin-top: 4px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: transparent;
+                            cursor: pointer;
+
+                            color: var(--cyan-500);
+                            font-weight: bold;
+                            font-size: 0.875rem;
+                            border-radius: 1rem;
+                            border: 1px solid var(--cyan-500);
+                            transition: filter 0.3s;
+
+                            &:hover {
+                                filter: brightness(0.9);
+                            }
+                        }
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    border: 0;
                 }
             }
         }
