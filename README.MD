@@ -9,11 +9,9 @@
   <a href="#key-license">License</a>
 </p>
 
-<!-- <h1 align='center'>
-  <img src='./printscreen/home.png' width="280">
-  <img src='./printscreen/postfull.png' width="280">
-  <img src='./printscreen/postslist.png' width="280">
-</h1> -->
+<h1 align='center'>
+  <img src='./screen/print.png' width="480">
+</h1>
 
 ## Getting Started DevTWITTER
 
