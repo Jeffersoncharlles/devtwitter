@@ -1,3 +1,90 @@
 .container {
     flex: 1;
+    background: var(--white);
+    margin: 10px 20px 0;
+
+    &_nav {
+        border-bottom: 1px solid var(--primary);
+        padding: 10px 15px;
+
+        a {
+            font-size: 1.125rem;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: bold;
+            margin-left: 20px;
+
+            &:first-child {
+                margin: 0;
+            }
+
+            &.active {
+                color: var(--gray-800);
+            }
+        }
+    }
+
+    ul {
+        color: var(--gray-800);
+        list-style: none;
+
+        li {
+            border-bottom: 1px solid var(--primary);
+            padding: 10px 15px;
+            display: flex;
+
+            >img {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+
+            }
+
+            .tweets {
+                margin-left: 10px;
+                display: flex;
+                flex-direction: column;
+
+                strong {
+                    font-size: 0.875rem;
+                    color: var(--gray-800);
+
+                    span {
+                        font-size: 0.8125rem;
+                        color: var(--gray-400);
+                        font-weight: normal;
+                    }
+                }
+
+                p {
+                    font-size: 0.875rem;
+                    color: var(--gray-800);
+                    margin-top: 5px;
+                }
+
+                &_info {
+                    display: flex;
+                    padding-top: 20px;
+
+                    a {
+                        color: var(--gray-300);
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: 0.8125rem;
+                        margin-left: 30px;
+
+                        svg {
+                            margin-right: 5px;
+                        }
+
+                        &:first-child {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
